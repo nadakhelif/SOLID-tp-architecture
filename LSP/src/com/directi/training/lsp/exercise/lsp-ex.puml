@@ -1,0 +1,23 @@
+@startuml
+class com.directi.training.lsp.exercise.ElectronicDuck {
+- boolean _on
++ void quack()
++ void swim()
++ void turnOn()
++ void turnOff()
+}
+class com.directi.training.lsp.exercise.Pool {
++ void run()
+- void quack(Duck)
+- void swim(Duck)
++ {static} void main(String[])
+}
+class com.directi.training.lsp.exercise.Duck {
++ void quack()
++ void swim()
+}
+
+
+com.directi.training.lsp.exercise.Duck <|-- com.directi.training.lsp.exercise.ElectronicDuck
+com.directi.training.lsp.exercise.Duck <.. com.directi.training.lsp.exercise.Pool : uses <
+@enduml

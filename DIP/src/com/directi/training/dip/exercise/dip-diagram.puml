@@ -1,0 +1,15 @@
+@startuml
+class com.directi.training.dip.exercise.EncodingModuleClient {
++ {static} void main(String[])
+}
+class com.directi.training.dip.exercise.MyDatabase {
+- {static} Map<Integer,String> _data
+- {static} int _count
++ int write(String)
+}
+class com.directi.training.dip.exercise.EncodingModule {
++ void encodeWithFiles()
++ void encodeBasedOnNetworkAndDatabase()
+}
+com.directi.training.dip.exercise.MyDatabase -right..> com.directi.training.dip.exercise.EncodingModule:uses >
+@enduml

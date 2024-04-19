@@ -1,0 +1,26 @@
+@startuml
+interface com.directi.training.ocp.exercice_refactored.Resource {
++ int findFreeSlot()
++ void bookSlot()
++ void freeSlot(int)
+}
+class com.directi.training.ocp.exercice_refactored.TimeResource {
++ int findFreeSlot()
++ void bookSlot()
++ void freeSlot(int)
+}
+class com.directi.training.ocp.exercice_refactored.SpaceResource {
++ int findFreeSlot()
++ void bookSlot()
++ void freeSlot(int)
+}
+class com.directi.training.ocp.exercice_refactored.ResourceAllocator {
++ int allocate(Resource)
++ void free(Resource,int)
+}
+
+com.directi.training.ocp.exercice_refactored.Resource <.. com.directi.training.ocp.exercice_refactored.ResourceAllocator : uses <
+
+com.directi.training.ocp.exercice_refactored.Resource <|.. com.directi.training.ocp.exercice_refactored.TimeResource
+com.directi.training.ocp.exercice_refactored.Resource <|.. com.directi.training.ocp.exercice_refactored.SpaceResource
+@enduml

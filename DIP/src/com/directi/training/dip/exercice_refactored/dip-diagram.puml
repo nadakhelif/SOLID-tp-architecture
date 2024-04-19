@@ -1,0 +1,40 @@
+@startuml
+interface com.exercice_refactored.IDataBase {
+~ int write(String)
+}
+class com.exercice_refactored.FileBase64Encoder {
++ String encode(String)
+}
+interface com.exercice_refactored.NetworkEncoder {
+}
+class com.exercice_refactored.MyDataBase {
+- {static} Map<Integer,String> _data
+- {static} int _count
++ int write(String)
+}
+interface com.exercice_refactored.Encoder {
+~ String encode(String)
+}
+class com.exercice_refactored.Client {
+- Encoder fileEncoder
+- NetworkEncoder networkEncoder
++ void encodeData(String)
+}
+interface com.exercice_refactored.FileEncoder {
+}
+class com.exercice_refactored.NetworkAndDataBaseEncoder {
+- IDataBase database
++ String encode(String)
+}
+
+
+com.exercice_refactored.FileEncoder <|.. com.exercice_refactored.FileBase64Encoder
+com.exercice_refactored.Encoder <|-- com.exercice_refactored.NetworkEncoder
+com.exercice_refactored.IDataBase <|.. com.exercice_refactored.MyDataBase
+com.exercice_refactored.Encoder <|-- com.exercice_refactored.FileEncoder
+com.exercice_refactored.NetworkEncoder <|.. com.exercice_refactored.NetworkAndDataBaseEncoder
+
+com.exercice_refactored.Client ..>com.exercice_refactored.FileEncoder
+com.exercice_refactored.Client ..>com.exercice_refactored.NetworkEncoder
+com.exercice_refactored.IDataBase <..com.exercice_refactored.NetworkAndDataBaseEncoder
+@enduml

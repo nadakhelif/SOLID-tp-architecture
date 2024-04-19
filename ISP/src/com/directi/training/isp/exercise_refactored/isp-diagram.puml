@@ -1,0 +1,49 @@
+@startuml
+interface exercise_refactored.Door {
+~ void lock()
+~ void unlock()
+~ void open()
+~ void close()
+}
+interface exercise_refactored.ISensing {
+~ void proximityCallback()
+}
+class exercise_refactored.TimedDoor {
+- {static} int TIME_OUT
+- boolean _locked
+- boolean _opened
++ void lock()
++ void unlock()
++ void open()
++ void close()
++ void timeOutCallback()
+}
+class exercise_refactored.Sensor {
++ void register(ISensing)
+- boolean isPersonClose()
+}
+class exercise_refactored.SensingDoor {
+- boolean _locked
+- boolean _opened
++ void lock()
++ void unlock()
++ void open()
++ void close()
++ void proximityCallback()
+}
+interface exercise_refactored.ITimed {
+~ void timeOutCallback()
+}
+class exercise_refactored.Timer {
++ void register(long,ITimed)
+}
+
+
+exercise_refactored.Door <|.. exercise_refactored.TimedDoor
+exercise_refactored.ITimed <|.. exercise_refactored.TimedDoor
+exercise_refactored.Door <|.. exercise_refactored.SensingDoor
+exercise_refactored.ISensing <|.. exercise_refactored.SensingDoor
+
+exercise_refactored.Sensor ..> exercise_refactored.ISensing
+exercise_refactored.Timer ..> exercise_refactored.ITimed
+@enduml

@@ -1,0 +1,50 @@
+@startuml
+class exercise.Sensor {
++ void register(Door)
+- boolean isPersonClose()
+}
+class exercise.TimedDoor {
+- {static} int TIME_OUT
+- boolean _locked
+- boolean _opened
++ void lock()
++ void unlock()
++ void open()
++ void close()
++ void timeOutCallback()
++ void proximityCallback()
+}
+interface exercise.Door {
+~ void lock()
+~ void unlock()
+~ void open()
+~ void close()
+~ void timeOutCallback()
+~ void proximityCallback()
+}
+class exercise.SensingDoor {
+- boolean _locked
+- boolean _opened
++ void lock()
++ void unlock()
++ void open()
++ void close()
++ void timeOutCallback()
++ void proximityCallback()
+}
+class exercise.Timer {
++ void register(long,Door)
+}
+
+note "timeOutCallback() generates exception" as N2
+exercise.SensingDoor .. N2
+
+note "proximityCallback() generates exception" as N1
+exercise.TimedDoor .. N1
+
+exercise.Door <|.. exercise.TimedDoor
+exercise.Door <|.. exercise.SensingDoor
+
+exercise.Door <.. exercise.Timer : uses
+exercise.Door <.. exercise.Sensor : uses
+@enduml

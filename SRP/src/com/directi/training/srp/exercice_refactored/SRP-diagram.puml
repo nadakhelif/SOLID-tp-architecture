@@ -1,0 +1,25 @@
+@startuml
+class com.directi.training.srp.exercice_refactored.CarDb {
++ List<Car> getCarsDb()
++ Car getById(String)
+}
+class com.directi.training.srp.exercice_refactored.CarManager {
++ String getCarsName()
++ Car getBestCar()
+}
+class com.directi.training.srp.exercice_refactored.Car {
+- String _id
+- String _model
+- String _brand
++ String getId()
++ String getModel()
++ String getBrand()
+}
+class com.directi.training.srp.exercice_refactored.CarTools {
++ String composeCarsName(List<Car>)
+}
+
+com.directi.training.srp.exercice_refactored.CarDb --o com.directi.training.srp.exercice_refactored.Car : Contains >
+com.directi.training.srp.exercice_refactored.CarManager -- com.directi.training.srp.exercice_refactored.CarDb : Uses >
+com.directi.training.srp.exercice_refactored.CarManager -- com.directi.training.srp.exercice_refactored.CarTools : Uses >
+@enduml

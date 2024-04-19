@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/SOLID-main/DIP/DIP.iml" filepath="$PROJECT_DIR$/SOLID-main/DIP/DIP.iml" />
+      <module fileurl="file://$PROJECT_DIR$/DIP/DIP1.iml" filepath="$PROJECT_DIR$/DIP/DIP1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ISP/ISP.iml" filepath="$PROJECT_DIR$/ISP/ISP.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SOLID-main/ISP/ISP1.iml" filepath="$PROJECT_DIR$/SOLID-main/ISP/ISP1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SOLID-main/LSP/LSP.iml" filepath="$PROJECT_DIR$/SOLID-main/LSP/LSP.iml" />
+      <module fileurl="file://$PROJECT_DIR$/LSP/LSP1.iml" filepath="$PROJECT_DIR$/LSP/LSP1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SOLID-main/OCP/OCP.iml" filepath="$PROJECT_DIR$/SOLID-main/OCP/OCP.iml" />
+      <module fileurl="file://$PROJECT_DIR$/OCP/OCP1.iml" filepath="$PROJECT_DIR$/OCP/OCP1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/SOLID-tp.iml" filepath="$PROJECT_DIR$/.idea/SOLID-tp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SOLID-main/SRP/SRP.iml" filepath="$PROJECT_DIR$/SOLID-main/SRP/SRP.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SRP/SRP1.iml" filepath="$PROJECT_DIR$/SRP/SRP1.iml" />
+    </modules>
+  </component>
+</project>
